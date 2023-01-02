@@ -1,0 +1,35 @@
+.accordion-button:not(.collapsed) {
+    color: inherit;
+    background: #f0c6e3;
+    color: rgb(143, 33, 47);
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    background-image: url(".././img/icon/logo4.png");
+  }
+
+  .accordion-button::after {
+    background-image: url(".././img/icon/logo4.png");
+  }
+
+  .accordion-button:focus {
+    box-shadow: inherit;
+  }
+
+  .accordion-button {
+    color: rgb(186, 54, 109);
+    background-color: #f5c6d6;
+    text-align: right;
+  }
+
+  .accordion-item {
+    background-color: #fff3f3;
+    border:2px solid rgb(240, 230, 230);
+  }
+
+  .list-unstyled {
+    color: #811a60;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.6em;
+  }

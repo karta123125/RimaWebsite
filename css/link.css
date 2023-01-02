@@ -1,0 +1,4 @@
+a:link{color:#df7777;}      /* 未存取連結*/
+a:visited {color:#b0475c;}  /* 已存取連結 */
+a:hover {color:#f3aebf;}  /* 滑鼠移動到連結上 */
+a:active {color:#b75a87;}  /* 滑鼠點選時 */

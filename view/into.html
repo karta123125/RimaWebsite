@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="zh-tw">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href=".././css/nav.css">
+    <link rel="stylesheet" href=".././css/accordion.css">
+    <link rel="stylesheet" href=".././css/link.css">
+  <title>坑ଘ(੭ˊᵕˋ)੭* ੈ✩‧₊˚</title>
+</head>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script>
+  var isPlaying = false;
+  var firstplay = false;
+  function play() {
+    var player = document.querySelector('#music1');
+    //alert(event.target.id)
+    switch (event.target.id) {
+      case 'btn1':
+        player.src = ".././music/jx3.mp3";
+        pause.src=".././img/into/playing.gif"
+        player.play();
+        isPlaying = true;
+        firstplay = true;
+        break;
+      case 'btn2':
+        player.src = ".././music/nsfw.mp3";
+        pause.src=".././img/into/playing.gif"
+        player.play();
+        isPlaying = true;
+        firstplay = true;
+        break;
+      case 'btn3':
+        player.src = ".././music/eternal.mp3";
+        pause.src=".././img/into/playing.gif"
+        player.play();
+        isPlaying = true;
+        firstplay = true;
+        break;
+      case 'pause':
+        if (isPlaying) {
+          player.pause();
+          pause.src=".././img/into/pause.png"
+          //player.src = ".././music/nsfw.mp3";
+          isPlaying = false;
+        } else if (isPlaying == false && firstplay == true) {
+          //player.src = ".././music/nsfw.mp3";                                    
+          player.play();
+          pause.src=".././img/into/playing.gif"
+          isPlaying = true;
+        }
+        break;
+    }
+
+  }
+
+</script>
+<style>
+  .mark,
+  mark {
+    background-color: rgba(248, 137, 187, 0.5);
+  }
+
+  .carousel-caption span {
+    background-color: rgba(248, 137, 187, 0.7);
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em
+  }
+</style>
+
+<body>
+  <!-- 這個是Navbar導覽列  -->
+  <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #f0d6f9;">
+    <div class="container">
+      <a class="navbar-brand d-lg-none" href="#">
+        <img src=".././img/icon/logo4.png">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll mx-auto" style="--bs-scroll-height: 100px;">
+          <a class="navbar-brand d-none d-lg-block" href="#">
+            <img src=".././img/icon/logo4.png">
+          </a>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../index.html">首頁</a>
+          </li>
+          <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src=".././img/icon/icon.jpg">
+              關於我
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="background.html">自我介紹</a></li>
+              <li><a class="dropdown-item" href="oc.html">繪型</a></li>
+              <li><a class="dropdown-item" href="into.html">坑ㄉ介紹</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src=".././img/icon/icon2.jpg">
+              作品
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href=".././portfolio/illustration.html">繪畫</a></li>
+              <li><a class="dropdown-item" href=".././portfolio/movie.html">影片</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src=".././img/icon/icon3.jpg">
+              相簿
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href=".././album/jx3.html">劍三</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar結束  -->
+  </br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1 col-sm-2">
+        <input class="img-fluid" type="image" id='pause' onclick='play();' style="border: 0px;"
+          src=".././img/into/pause.png">
+      </div>
+      <div class="col-md-5 col-sm-10">
+        <!--手風琴開始-->
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <audio id='music1' src=".././music/jx3.mp3"></audio>
+              <button id='btn1' class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick='play();'>
+                劍俠情緣三
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <ul class="list-unstyled">
+                  <li>台服沒了之後就比較養老成為了<mark>休閒黨</mark>，但打本、吃雞、jjc也會玩!</li>
+                  <li>小號狂魔，每隻都手動從１練到滿等沒在跟你怕</li>
+                  <li>目前主玩丐太，<del>前本號是雞蘿但我藏劍玩膩了</del></li>
+                  <li>會玩的還有蒼D/藥奶/七秀/花間/蓬萊/毒經/唐門/氣純</li>
+                  <li>歡迎來找我打本解成就掛機說騷話(*´◒`*)</li>
+                  <li><strong>有在接證件照代截，有興趣者請按<u>這裡</u></strong></li>
+                </br>
+                  <li><h6 style="font-size: 40%;text-align: right;">꒰bgm:<a href="https://www.bilibili.com/video/BV1Kg411h779/?p=2&vd_source=ed73d5203a430a1b0d81416d28d57aa5" target="_blank">《“社恐”的遊戲報告》</a></h6></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <audio id='music1' src=".././music/nsfw.mp3"></audio>
+              <button id='btn2' class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" onclick='play();'>
+                ディア♥ヴォカリスト
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <ul class="list-unstyled">
+                  <li>エーたん的哈尼，ジュダ的盲目粉絲</li>
+                  <li>我一時想不起來要打啥之後再改ㄏㄏ</li>
+                </br>
+                <li><h6 style="font-size: 40%;text-align: right;">꒰bgm:<a href="https://www.youtube.com/watch?v=Bz3kMjG77q0" target="_blank">NSFW『そらからふるゆめ』『THE MIRROR HOUSE』</a></h6></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <audio id='music1' src=".././music/eternal.mp3"></audio>
+              <button id='btn3' class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" onclick='play();'>
+                永恆輪迴(Eternal Return)
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <ul class="list-unstyled">
+                  <li>已快進入全婆俠模式但最愛的還是洛茲♥</li>
+                  <li>❀main角：秀雅</li>
+                  <li>❀最愛CP：洛茲&伊索爾</li>
+                  <li>每個角色都是寶包我都好喜歡(*꒦ິ⌓꒦ີ)</li>
+                </br>
+                <li><h6 style="font-size: 40%;text-align: right;">꒰bgm:<a href="https://www.youtube.com/watch?v=QQSId9Zu1HY" target="_blank">Eternal World</a></h6></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--手風琴結束-->
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="row">
+          <div class="col-12">
+            <!--輪播開始-->
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                  <img src=".././img/into/into.png" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5><span>我的帥丐</span></h5>
+                    <p><span>正太徒弟現正招募中</span></p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                  <img src=".././img/into/into2.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5><span>拍完照後就沒用處了的痛包</span></h5>
+                    <p><span>現在買周邊的慾望是立牌>徽章</span></p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                  <img src=".././img/into/into3.png" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+
+                    <h5><span>安安你好我是永恆大便</span></h5>
+                    <p><span>我很爛但我還是喜歡玩，所以拜託陪我玩啦...</span></p>
+
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <!--輪播結束-->
+          </div>
+          <div class="col-12 text-center">
+            <img src=".././img/into/memo.jpg" class="figure-img img-fluid rounded" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="container">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <img src=".././img/icon/chicken.png" class="rounded mx-auto d-block" alt="...">
+        <p class="text-center"><em><small>꙳⋆𓈒𓂂𓏸◌2023.01.01𓐍𓏸𓂂⋆♥꙳</small></em></p>
+      </div>
+      <div class="col-4">
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
